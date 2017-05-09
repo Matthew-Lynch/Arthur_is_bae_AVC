@@ -1,0 +1,26 @@
+ #include <stdio.h>
+#include <time.h>
+#include "E101.h" //this is our custom ENGR101 C library.
+
+        //This sets up the RPi hardware and ensures
+        //Everything is working correctly
+        //We declare an integer variable to store the ADC data
+        //Reads from analogue pin 0 (A0) through A7
+        //prints read analogue value
+        //waits for 0.5 seconds (500000 microseconds)        
+int main(){
+    
+        init();
+        int adc_reading;
+        int max = 0;
+        int min = 1000;
+        int mean = 0;
+        for (int i=0; i<10; i=i+1){
+            
+        adc_reading = read_analog(0);
+        printf("%d\n",adc_reading);
+        if (adc_reading > max){
+        max = adc_reading;
+    }    printf ("max=%d , max);
+        
+return 0;}
