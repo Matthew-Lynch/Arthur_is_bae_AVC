@@ -1,0 +1,12 @@
+double scale_pid(double pid){ //call scale passing pid signal as input
+	float scale = 0.2; //Needs tuning based on max PID output
+	int output = 254;
+	
+	if(pid * scale > 254){ //Limiter
+		ouput = 254; 
+	}
+	else{
+		output = (int)(pid * scale); //scales PID and casts to int
+	}
+	return output;
+}
