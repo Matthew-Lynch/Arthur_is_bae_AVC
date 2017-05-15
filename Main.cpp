@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <time.h>
+#include "E101.h" //this is our custom ENGR101 C library.
+
 void main()
 bool cam = true;
 double errNear;
