@@ -1,0 +1,14 @@
+double scale_pid(double pid, float motorGain){ //call scale passing pid signal and motor gain as input
+	float scale = 0.2; //Needs tuning based on max PID output
+	double temp;
+	int output;
+	
+	if(pid * scale > 254){ //Limiter
+		temp = 254; 
+	}
+	else{
+		temp = (pid * scale); //scales PID and casts to int
+	}
+	output = temp*motorGain; //compensate for motor
+	return output;
+}
