@@ -35,8 +35,8 @@ double scale_pid(double pid, float motorGain){ //call scale passing pid signal a
 	double temp;
 	int output;
 	
-	if(pid * scale > 254){ //Limiter
-		temp = 254; 
+	if(pid * scale > 55){ //Limiter
+		temp = 55;   //adjusted down from 254 to 55 under recomendation from arthur - Matt
 	}
 	else{
 		temp = (pid * scale); //scales PID and casts to int
@@ -46,7 +46,7 @@ double scale_pid(double pid, float motorGain){ //call scale passing pid signal a
 	return output;
 }
 
-double pid(double inNear,double inFar){ //call pid passing error signal as input
+double pid(double inNear, double inFar){ //call pid passing error signal as input
 	//double dt = 0.001 //time step in s
 	float dGain = 0.5; //differential gain co-efficient
 	float iGain = 0.5; //integral gain co-efficient
@@ -59,7 +59,7 @@ double pid(double inNear,double inFar){ //call pid passing error signal as input
 	double PID;
 	int i = 0; //number of samples collected
 
-	//errNew=input;
+	//errNew = input;
 	//sleep1(0, 001); //this MUST equal dt
 
 while(true){
@@ -88,9 +88,9 @@ int main(){
 	while(true){
 	//cam = set_mode()
 		/* if(whiteCount<3){
-		 * panic();
+		 * panic(); // could probably just be set to turnRight as this 'should' only happen at dead ends- Matt
 		 * }
-		 * if(whiteCount>212){ //212 is 2/3rds of frame width
+		 * if(whiteCount>212 && signal<-50){ //212 is 2/3rds of frame width.  Matt-added the  &&<-50 as you could have a white count larger than 212 at a right turn
 		 * turnLeft();
 		 * }
 		**/
