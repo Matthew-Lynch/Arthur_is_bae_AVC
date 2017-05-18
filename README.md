@@ -1,2 +1,2 @@
-# Arthur_is_bae_AVC
-Arthur is bae's team github for the avc
+# Help_It's_Sentient_AVC
+Help it's sentient team github for the avc
