@@ -8,27 +8,22 @@ int baseSpeed = 70;
 
 
 int read_cam(int row){
-	whiteCount = 0;
-	double col = 0;
+	int sum, p, white, col = 0, sum = 0; //declare variables
 	take_picture();
-	int sum,s;
-	double signal = 0;
-	int white;
-	//Camera reading Near row
-	for(int i=0; i<320 ; i++){
+
+	for(int i=0; i<320 ; i++){ 	//Camera reading Near row
 		white = get_pixel(col+i,row,3);
 		if (white>127){
-		s = 1;
-		whiteCount++;
-		} else {
-		s = 0;
+		p = 1; // for white
+		whiteCount++; //increase global variable whiteCount
+		} 
+		else {
+		p = 0; // for black
 		}
-		sum = sum + (i-160)*s; //Gives the white a value that is centred at 0 (middle of picture)
+		sum = sum + (i-160)*p; //Gives the white a value that is centred at 0 (middle of picture)
 		}
-	signal = sum;
-	//printf("%f",signal);
-	return signal; //Return totalWhite;
-
+		
+	return sum; //Return error signal;
 }
 
 double scale_pid(double pid, float motorGain){ //call scale passing pid signal and motor gain as input
@@ -87,13 +82,15 @@ int main(){
 	int driveRight;
 	
 	while(true){
-	//cam = set_mode()
-		/* if(whiteCount<3){
+	//cam = set_mode();
+		/* whiteCount = whiteCount/2; // averages the two whitecount readings
+		 * if(whiteCount<3){
 		 * panic();
 		 * }
 		 * if(whiteCount>212){ //212 is 2/3rds of frame width
 		 * turnLeft();
 		 * }
+		 * whiteCount = 0; // reset whitecount for next tick
 		**/
 		if(cam==true){
 			errNear = read_cam(160);
@@ -104,7 +101,7 @@ int main(){
 		}
 	errPID = pid(errNear,errFar);
 	driveLeft = scale_pid(errPID, 1); // tune gain L
-	driveRight = scale_pid(errPID, 1); //tune gain R
+	driveRight = scale_pid(errPID, 1); // tune gain R
 
 	set_motor(0, baseSpeed+driveLeft);
 	set_motor(1, baseSpeed+driveRight);
