@@ -4,6 +4,7 @@
 
 //Global Variables
 int whiteCount = 0;
+int baseSpeed = 70;
 
 
 int read_cam(int row){
@@ -31,8 +32,8 @@ int read_cam(int row){
 }
 
 double scale_pid(double pid, float motorGain){ //call scale passing pid signal and motor gain as input
-	float scale = 0.2; //Needs tuning based on max PID output
-	double temp;
+	float scale = 0.2; // Needs tuning based on max PID output
+	double temp; // Storeage variable for gain processing
 	int output;
 	
 	if(pid * scale > 254){ //Limiter
@@ -48,9 +49,9 @@ double scale_pid(double pid, float motorGain){ //call scale passing pid signal a
 
 double pid(double inNear,double inFar){ //call pid passing error signal as input
 	//double dt = 0.001 //time step in s
-	float dGain = 0.5; //differential gain co-efficient
-	float iGain = 0.5; //integral gain co-efficient
-	float pGain = 0.5; //proportional gain co-efficient
+	float dGain = 1.0; //differential gain co-efficient
+	float iGain = 0.1; //integral gain co-efficient
+	float pGain = 0.3; //proportional gain co-efficient
 	double errTotal = 0; //recent error signal input
 	//double errNew; //error signal input from dt ago
 	double diff; //differential
@@ -102,11 +103,11 @@ int main(){
 			//read_ir(); //write processes for this
 		}
 	errPID = pid(errNear,errFar);
-	driveLeft = scale_pid(errPID, 0.95); // tune gain L
+	driveLeft = scale_pid(errPID, 1); // tune gain L
 	driveRight = scale_pid(errPID, 1); //tune gain R
 
-	set_motor(0, driveLeft);
-	set_motor(1, driveRight);
+	set_motor(0, baseSpeed+driveLeft);
+	set_motor(1, baseSpeed+driveRight);
 
 	}
 return 0;
