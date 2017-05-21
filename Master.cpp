@@ -43,12 +43,10 @@ double scale_pid(double pid, float motorGain){ //call scale passing pid signal a
 }
 
 double pid(double inNear,double inFar){ //call pid passing error signal as input
-	//double dt = 0.001 //time step in s
 	float dGain = 1.0; //differential gain co-efficient
 	float iGain = 0.1; //integral gain co-efficient
 	float pGain = 0.3; //proportional gain co-efficient
 	double errTotal = 0; //recent error signal input
-	//double errNew; //error signal input from dt ago
 	double diff; //differential
 	double integ; //integral
 	double prop; //proportional
@@ -58,16 +56,15 @@ double pid(double inNear,double inFar){ //call pid passing error signal as input
 	//errNew=input;
 	//sleep1(0, 001); //this MUST equal dt
 
-while(true){
-	errTotal += inNear; // adds input to total - used inNear, this could change
-	i++; 
-	diff = ((inNear-inFar)/2)*dGain; //change from errNear to errFar * gain
-	integ = ((errTotal)/i)*iGain; //average err * time step * gain
-	//sleep1(0, 001); //this MUST equal dt
-	prop = inNear*pGain; //Calculate proportional err - used inNear, this could change
-	PID = prop+diff+integ; //Sum components
-	return PID;
-}
+	while(true){
+		errTotal += inNear; // adds input to total - used inNear, this could change
+		i++; 
+		diff = ((inNear-inFar)/2)*dGain; //change from errNear to errFar * gain
+		integ = ((errTotal)/i)*iGain; //average err * time step * gain
+		prop = inNear*pGain; //Calculate proportional err - used inNear, this could change
+		PID = prop+diff+integ; //Sum components
+		return PID;
+	}
 }
 
 
@@ -82,7 +79,7 @@ int main(){
 	int driveRight;
 	
 	while(true){
-	//cam = set_mode();
+		//cam = set_mode();
 		/* whiteCount = whiteCount/2; // averages the two whitecount readings
 		 * if(whiteCount<3){
 		 * panic();
@@ -99,13 +96,13 @@ int main(){
 		else{
 			//read_ir(); //write processes for this
 		}
-	errPID = pid(errNear,errFar);
-	driveLeft = scale_pid(errPID, 1); // tune gain L
-	driveRight = scale_pid(errPID, 1); // tune gain R
+		errPID = pid(errNear,errFar);
+		driveLeft = scale_pid(errPID, 1); // tune gain L
+		driveRight = scale_pid(errPID, 1); // tune gain R
 
-	set_motor(0, baseSpeed+driveLeft);
-	set_motor(1, baseSpeed+driveRight);
-
-	}
+		set_motor(0, baseSpeed+driveLeft);
+		set_motor(1, baseSpeed+driveRight);
+		//sleep1(0, 000010); //sleep code for stability?
+		}
 return 0;
 }
