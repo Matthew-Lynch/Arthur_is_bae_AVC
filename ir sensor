@@ -1,4 +1,4 @@
- #include <stdio.h>
+#include <stdio.h>
 #include <time.h>
 #include "E101.h" //this is our custom ENGR101 C library.
 
@@ -21,6 +21,6 @@ int main(){
         printf("%d\n",adc_reading);
         if (adc_reading > max){
         max = adc_reading;
-    }    printf ("max=%d , max);
+    }   printf ("max=%d", max);
         
 return 0;}
