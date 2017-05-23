@@ -4,39 +4,37 @@
 
 //Global Variables
 int whiteCount = 0;
+int baseSpeed = 40;
 
 
 int read_cam(int row){
 	whiteCount = 0;
-	double col = 0;
+	int p, white, col = 0, sum = 0; //declare variables
 	take_picture();
-	int sum,s;
-	double signal = 0;
-	int white;
-	//Camera reading Near row
-	for(int i=0; i<320 ; i++){
-	white = get_pixel(col,row,3);
-		if (white>127){
-		s = 1;
-		whiteCount++;
-		} else {
-		s = 0;
-		}
-	sum = sum + (i-160)*s; //Gives the white a value that is centred at 0 (middle of picture)
-	}
-	signal = sum;
-	//printf("%f",signal);
-	return signal; //Return totalWhite;
 
+	for(int i=0; i<320 ; i++){ 	//Camera reading Near row
+		white = get_pixel(row,col+i,3);
+		if (white>127){
+		p = 1; // for white
+		whiteCount++; //increase global variable whiteCount
+		} 
+		else {
+		p = 0; // for black
+		}
+		sum += (i-160)*p; //Gives the white a value that is centred at 0 (middle of picture)
+		}
+		
+	return sum; //Return error signal;
 }
 
 double scale_pid(double pid, float motorGain){ //call scale passing pid signal and motor gain as input
-	float scale = 0.2; //Needs tuning based on max PID output
-	double temp;
+	
+	float scale = 0.0032; // Needs tuning based on max PID output
+	double temp; // Storeage variable for gain processing
 	int output;
 	
-	if(pid * scale > 254){ //Limiter
-		temp = 254; 
+	if(pid * scale > 100){ //Limiter
+		temp = 100; 
 	}
 	else{
 		temp = (pid * scale); //scales PID and casts to int
@@ -47,12 +45,10 @@ double scale_pid(double pid, float motorGain){ //call scale passing pid signal a
 }
 
 double pid(double inNear,double inFar){ //call pid passing error signal as input
-	//double dt = 0.001 //time step in s
-	float dGain = 0.5; //differential gain co-efficient
-	float iGain = 0.5; //integral gain co-efficient
-	float pGain = 0.5; //proportional gain co-efficient
+	float dGain = 0.85; //differential gain co-efficient
+	float iGain = 0.1; //integral gain co-efficient
+	float pGain = 1.0; //proportional gain co-efficient
 	double errTotal = 0; //recent error signal input
-	//double errNew; //error signal input from dt ago
 	double diff; //differential
 	double integ; //integral
 	double prop; //proportional
@@ -62,16 +58,21 @@ double pid(double inNear,double inFar){ //call pid passing error signal as input
 	//errNew=input;
 	//sleep1(0, 001); //this MUST equal dt
 
-while(true){
-	errTotal += inNear; // adds input to total - used inNear, this could change
-	i++; 
-	diff = ((inNear-inFar)/2)*dGain; //change from errNear to errFar * gain
-	integ = ((errTotal)/i)*iGain; //average err * time step * gain
-	//sleep1(0, 001); //this MUST equal dt
-	prop = inNear*pGain; //Calculate proportional err - used inNear, this could change
-	PID = prop+diff+integ; //Sum components
-	return PID;
+	while(true){
+		errTotal += inNear; // adds input to total - used inNear, this could change
+		i++; 
+		diff = ((inNear-inFar)/2)*dGain; //change from errNear to errFar * gain
+		integ = ((errTotal)/i)*iGain; //average err * time step * gain
+		prop = inNear*pGain; //Calculate proportional err - used inNear, this could change
+		PID = prop+diff+integ; //Sum components
+		return PID;
+	}
 }
+
+void goBack(int left, int right){
+	
+	set_motor(1, -(40+left));
+	set_motor(2, -(40-right));	
 }
 
 
@@ -84,16 +85,20 @@ int main(){
 	double errPID;
 	int driveLeft;
 	int driveRight;
+	int joe = 0;
 	
-	while(true){
-	//cam = set_mode()
-		/* if(whiteCount<3){
+	while(joe<2000){
+		//cam = set_mode();
+		/* whiteCount = whiteCount/2; // averages the two whitecount readings
+		 * if(whiteCount<3){
 		 * panic();
 		 * }
 		 * if(whiteCount>212){ //212 is 2/3rds of frame width
 		 * turnLeft();
 		 * }
+		 * whiteCount = 0; // reset whitecount for next tick
 		**/
+		//display_picture(1, 0);
 		if(cam==true){
 			errNear = read_cam(160);
 			errFar = read_cam(80);
@@ -101,13 +106,23 @@ int main(){
 		else{
 			//read_ir(); //write processes for this
 		}
-	errPID = pid(errNear,errFar);
-	driveLeft = scale_pid(errPID, 0.95); // tune gain L
-	driveRight = scale_pid(errPID, 1); //tune gain R
-
-	set_motor(0, driveLeft);
-	set_motor(1, driveRight);
-
-	}
+		errPID = pid(errNear,errFar);
+		
+		
+		driveLeft = scale_pid(errPID, 1); // tune gain L
+		driveRight = scale_pid(errPID, 1); // tune gain R
+		
+		if(whiteCount < 7){
+			goBack(driveLeft, driveRight);
+			sleep1(0, 100);
+		}
+		else{
+			set_motor(2, baseSpeed+driveLeft);
+			set_motor(1, baseSpeed-driveRight);
+		}
+		//sleep1(0, 000010); //sleep code for stability?
+		joe++;
+		}
+		stop(0);
 return 0;
 }
