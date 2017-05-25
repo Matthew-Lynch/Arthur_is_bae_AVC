@@ -144,8 +144,8 @@ int main(){
 			}
 		}
 		else{
-			set_motor(2, baseSpeed+driveLeft);
-			set_motor(1, baseSpeed-driveRight);
+			set_motor(2, -(baseSpeed+driveLeft));
+			set_motor(1, -(baseSpeed-driveRight));
 		}
 		
 		
