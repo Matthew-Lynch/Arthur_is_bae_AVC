@@ -4,8 +4,8 @@
 
 //Global Variables
 int whiteCount = 0;
-int baseSpeed = 40;
-
+int baseSpeed = 160;
+int i = 0;// counts main loop, prints at 500
 
 int read_cam(int row){
 	whiteCount = 0;
@@ -14,7 +14,7 @@ int read_cam(int row){
 
 	for(int i=0; i<320 ; i++){ 	//Camera reading Near row
 		white = get_pixel(row,col+i,3);
-		if (white>127){
+		if (white>120){
 		p = 1; // for white
 		whiteCount++; //increase global variable whiteCount
 		} 
@@ -29,12 +29,15 @@ int read_cam(int row){
 
 double scale_pid(double pid, float motorGain){ //call scale passing pid signal and motor gain as input
 	
-	float scale = 0.002; // Needs tuning based on max PID output
+	float scale = 0.04; // Needs tuning based on max PID output
 	double temp; // Storeage variable for gain processing
 	int output;
 	
-	if(pid * scale > 100){ //Limiter
-		temp = 100; 
+	if(pid * scale + baseSpeed> 250){ //Limiter
+		temp = 250-baseSpeed; 
+	}
+	else if(pid * scale + baseSpeed < -250){
+		temp = -250;
 	}
 	else{
 		temp = (pid * scale); //scales PID and casts to int
@@ -46,7 +49,7 @@ double scale_pid(double pid, float motorGain){ //call scale passing pid signal a
 
 double pid(double inNear,double inFar){ //call pid passing error signal as input
 	float dGain = 0.5; //differential gain co-efficient
-	float iGain = 0.1; //integral gain co-efficient
+	float iGain = 0.2; //integral gain co-efficient
 	float pGain = 0.7; //proportional gain co-efficient
 	double errTotal = 0; //recent error signal input
 	double diff; //differential
@@ -71,8 +74,8 @@ double pid(double inNear,double inFar){ //call pid passing error signal as input
 
 void goBack(int left, int right){
 	
-	set_motor(1, -40-left);
-	set_motor(2, -40+right);	
+	set_motor(1, (baseSpeed/2)-left);
+	set_motor(2, (baseSpeed/2)+right);	
 }
 
 bool open_gate(){
@@ -93,20 +96,20 @@ bool open_gate(){
 
 
 int main(){
-	init();
+	init(); //initialise gpio
 	bool cam = true;
 	double errNear;
 	double errFar; 
 	double errPID;
 	int driveLeft;
 	int driveRight;
-	int joe = 0;
+	//int joe = 0;
 	int lost = 0;
 	
-	//sleep1(15, 0);
-	open_gate();
+	//sleep1(20, 0);
+	//bool go = open_gate();
 	sleep1(1, 0);
-	while(joe<3000){
+	while(true){
 		
 		//cam = set_mode();
 		/* whiteCount = whiteCount/2; // averages the two whitecount readings
@@ -131,26 +134,33 @@ int main(){
 		
 		driveLeft = scale_pid(errPID, 1); // tune gain L
 		driveRight = scale_pid(errPID, 1); // tune gain R
-		sleep1(0, 01);
+		
+		if(i%50==0){
+			printf("i=%f___errNear: %f ___errFar: %f ___PID: %f\n", i, errNear, errFar, errPID);
+		}
 		
 		if(whiteCount < 7){
 			lost++;
 			goBack(driveLeft, driveRight);
-			sleep1(0, 1);
+			sleep1(0, 020000);
+			i+=2;
+			//printf("Back\n", driveLeft, driveRight);
 			if(lost>10){
 				goBack(driveLeft, driveRight);
-				sleep1(0, 2);
+				sleep1(0, 030000);
 				lost=0;
+				printf("LOST\n");
+				i+=3;
 			}
 		}
 		else{
-			set_motor(2, -(baseSpeed+driveLeft));
-			set_motor(1, -(baseSpeed-driveRight));
+			set_motor(2, -baseSpeed+driveLeft);
+			set_motor(1, -baseSpeed-driveRight);
+		sleep1(0, 010000);
+		i++;
 		}
 		
-		
-		//sleep1(0, 000010); //sleep code for stability?
-		joe++;
+		//joe++;
 		}
 		stop(0);
 return 0;
