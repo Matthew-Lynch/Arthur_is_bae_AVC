@@ -1,0 +1,531 @@
+Init camera output with 320/240
+Creating pool with 3 buffers of size 307200
+Camera successfully created
+Connection to 130.195.6.196 failed
+ip=130.195.6.196
+Sending Please failed
+message=Please
+Receive failed
+Sending  failed
+i=-2850.000000___errNear: -3484.000000 ___errFar: -2406.499975 ___PID: -nan
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=-8892.000000___errNear: -5586.000000 ___errFar: -8829.299920 ___PID: -nan
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=-5460.000000___errNear: 2465.000000 ___errFar: -6895.249951 ___PID: -nan
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=12710.000000___errNear: 9480.000000 ___errFar: 12246.499886 ___PID: 0.000000
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=9150.000000___errNear: 1545.000000 ___errFar: 10136.249918 ___PID: 0.000000
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=0.000000___errNear: 0.000000 ___errFar: 0.000000 ___PID: 0.000000
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=10575.000000___errNear: 7498.000000 ___errFar: 10286.749905 ___PID: 0.000000
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+LOST
+i=0.000000___errNear: 0.000000 ___errFar: 0.000000 ___PID: 0.000000
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=11099.000000___errNear: -11752.000000 ___errFar: 15701.849901 ___PID: 0.000000
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=9794.000000___errNear: -12818.000000 ___errFar: 14467.599912 ___PID: 0.000000
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=317.000000___errNear: -3150.000000 ___errFar: 1152.049997 ___PID: 0.000000
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=-3150.000000___errNear: 0.000000 ___errFar: -3622.499972 ___PID: -nan
+LOST
+i=2097.000000___errNear: 0.000000 ___errFar: 2411.549981 ___PID: 0.000000
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=-2440.000000___errNear: -1760.000000 ___errFar: -2365.999978 ___PID: -nan
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=-160.000000___errNear: 0.000000 ___errFar: -183.999999 ___PID: -nan
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=-1998.000000___errNear: -4183.000000 ___errFar: -1251.949982 ___PID: -nan
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=7670.000000___errNear: 1480.000000 ___errFar: 8450.499931 ___PID: 0.000000
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=0.000000___errNear: 0.000000 ___errFar: 0.000000 ___PID: 0.000000
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=-5513.000000___errNear: 4109.000000 ___errFar: -7367.199951 ___PID: -nan
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=-3266.000000___errNear: -3465.000000 ___errFar: -2889.649971 ___PID: -nan
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=-3161.000000___errNear: -243.000000 ___errFar: -3574.399972 ___PID: -nan
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=8500.000000___errNear: 9560.000000 ___errFar: 7384.999924 ___PID: 0.000000
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=1244.000000___errNear: 10335.000000 ___errFar: -1153.150011 ___PID: -nan
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=0.000000___errNear: 0.000000 ___errFar: 0.000000 ___PID: 0.000000
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=0.000000___errNear: 0.000000 ___errFar: 0.000000 ___PID: 0.000000
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=-4991.000000___errNear: 0.000000 ___errFar: -5739.649955 ___PID: -nan
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=0.000000___errNear: 0.000000 ___errFar: 0.000000 ___PID: 0.000000
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+i=-4102.000000___errNear: 0.000000 ___errFar: -4717.299963 ___PID: -nan
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+i=0.000000___errNear: -1705.000000 ___errFar: 426.250000 ___PID: 0.000000
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+i=0.000000___errNear: -160.000000 ___errFar: 40.000000 ___PID: 0.000000
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=470.000000___errNear: 0.000000 ___errFar: 540.499996 ___PID: 0.000000
+LOST
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+i=0.000000___errNear: 1545.000000 ___errFar: -386.250000 ___PID: -nan
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+i=-160.000000___errNear: 0.000000 ___errFar: -183.999999 ___PID: -nan
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+LOST
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+Speed should be in range -255..255
+LOST
+LOST
+LOST
+LOST
+i=0.000000___errNear: 0.000000 ___errFar: 0.000000 ___PID: 0.000000
+LOST
+LOST
+i=0.000000___errNear: 0.000000 ___errFar: 0.000000 ___PID: 0.000000
+LOST
+LOST
+i=0.000000___errNear: 0.000000 ___errFar: 0.000000 ___PID: 0.000000
+LOST
